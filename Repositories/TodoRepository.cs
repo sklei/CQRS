@@ -2,7 +2,7 @@ using CQRS.Domain.Models;
 
 namespace CQRS.Repositories;
 
-public class TodoRepository 
+public class TodoRepository
 {
     public List<TodoItem> Todos { get; set; }
 

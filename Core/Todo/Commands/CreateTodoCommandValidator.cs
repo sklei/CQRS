@@ -1,6 +1,6 @@
-using MediatR;
 using CQRS.Repositories;
 using FluentValidation;
+using MediatR;
 
 namespace CQRS.Core.Todo;
 
@@ -13,7 +13,7 @@ public class CreateTodoCommandValidator : AbstractValidator<CreateTodoCommand>
                 .WithMessage("Title maxlength is 20.")
             .NotEmpty()
                 .WithMessage("Title can't be empty.");
-        
+
         // Multiple validations are possible
         // RuleFor(v => v.Title)
         //     .EmailAddress();

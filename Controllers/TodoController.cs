@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
 using CQRS.Core.Todo;
 using CQRS.Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CQRS.Controllers;
 

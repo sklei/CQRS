@@ -1,6 +1,6 @@
-using MediatR;
-using CQRS.Repositories;
 using CQRS.Domain.Models;
+using CQRS.Repositories;
+using MediatR;
 
 namespace CQRS.Core.Todo;
 
@@ -17,7 +17,7 @@ public class GetTodosQueryHandler : IRequestHandler<GetTodosQuery, IEnumerable<T
     {
         _todoRepository = todoRepository;
     }
-    
+
     public Task<IEnumerable<TodoItem>> Handle(GetTodosQuery request, CancellationToken cancellationToken)
     {
         return Task.FromResult(_todoRepository.Todos.AsEnumerable());

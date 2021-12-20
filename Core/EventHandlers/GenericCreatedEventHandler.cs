@@ -3,7 +3,7 @@ using MediatR;
 
 namespace CQRS.Core.Todo;
 
-public class GenericCreatedEventHandler : INotificationHandler<BaseCreatedEvent>
+public class GenericCreatedEventHandler : INotificationHandler<CreatedEventBase>
 {
     private readonly ILogger<GenericCreatedEventHandler> _logger;
 
@@ -12,7 +12,7 @@ public class GenericCreatedEventHandler : INotificationHandler<BaseCreatedEvent>
         _logger = logger;
     }
 
-    public Task Handle(BaseCreatedEvent notification, CancellationToken cancellationToken)
+    public Task Handle(CreatedEventBase notification, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Some generic thing is created!");
 

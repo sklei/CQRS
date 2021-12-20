@@ -3,7 +3,7 @@ using MediatR;
 
 namespace CQRS.Domain.Events;
 
-public class TodoItemCreatedEvent : BaseCreatedEvent
+public class TodoItemCreatedEvent : CreatedEventBase
 {
     public TodoItemCreatedEvent(TodoItem item)
     {

@@ -1,6 +1,6 @@
-using MediatR;
-using CQRS.Repositories;
 using CQRS.Domain.Models;
+using CQRS.Repositories;
+using MediatR;
 
 namespace CQRS.Core.Todo;
 
@@ -17,7 +17,7 @@ public class GetTodosSlowQueryHandler : IRequestHandler<GetTodosSlowQuery, IEnum
     {
         _todoRepository = todoRepository;
     }
-    
+
     public async Task<IEnumerable<TodoItem>> Handle(GetTodosSlowQuery request, CancellationToken cancellationToken)
     {
         await Task.Delay(2000);

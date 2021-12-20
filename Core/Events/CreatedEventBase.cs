@@ -3,7 +3,7 @@ using MediatR;
 
 namespace CQRS.Domain.Events;
 
-public class BaseCreatedEvent : INotification
+public class CreatedEventBase : INotification
 {
-    
+
 }

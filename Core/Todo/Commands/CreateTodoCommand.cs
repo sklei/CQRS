@@ -1,7 +1,7 @@
-using MediatR;
-using CQRS.Repositories;
-using CQRS.Domain.Models;
 using CQRS.Domain.Events;
+using CQRS.Domain.Models;
+using CQRS.Repositories;
+using MediatR;
 
 namespace CQRS.Core.Todo;
 
